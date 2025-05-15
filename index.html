@@ -28,12 +28,6 @@
       margin-bottom: 20px;
     }
 
-    #pix {
-      font-weight: bold;
-      font-size: 16px;
-      margin: 16px 0;
-    }
-
     button {
       background-color: #2ecc71;
       color: white;
@@ -62,10 +56,9 @@
 </head>
 <body>
   <div class="container">
-    <!-- Imagem final gerada com QR real -->
+    <!-- Imagem com QR Code e layout completo -->
     <img src="pix_qk_final.png" alt="Pagamento Pix">
 
-    <p id="pix">113e8434-064f-4c98-8709-40e91f364ef5</p>
     <button onclick="copiarPix()">Copiar chave Pix</button>
 
     <h2>Como pagar com Pix</h2>
@@ -74,7 +67,7 @@
 
   <script>
     function copiarPix() {
-      const chave = document.getElementById("pix").textContent;
+      const chave = "113e8434-064f-4c98-8709-40e91f364ef5";
       navigator.clipboard.writeText(chave).then(() => {
         alert("Chave Pix copiada com sucesso!");
       });
